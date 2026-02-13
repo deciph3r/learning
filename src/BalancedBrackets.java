@@ -3,8 +3,8 @@ import java.util.Stack;
 
 public class BalancedBrackets {
     public static boolean isBalancedBrackets(String input) {
-        Stack characterStack = new Stack<>();
-        Map bracketMap = Map.of(')', '(', '}', '{', ']', '[');
+        Stack<Character> characterStack = new Stack<>();
+        Map<Character,Character> bracketMap = Map.of(')', '(', '}', '{', ']', '[');
         for (char c : input.toCharArray()) {
             if (bracketMap.containsValue(c)) {
                 characterStack.push(c);
